@@ -3,6 +3,8 @@ body {
   background-color: cornflowerblue;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 75px;
+  padding: 20px;
 }
 
 /* Container principal */
