@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt_BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
     <title>Contador de Cliques</title>
+
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div>
-      <div class="container-botao">
-        <button class="btn-click" type="submit" id="btn-click">
-          ME CLIQUE
+    <div class="container">
+      <div class="contador">
+        <p class="contador-paragrafo" id="contador-paragrafo">0</p>
+      </div>
+      <div class="botao">
+        <button class="btn-click" id="btn-click" type="submit">
+          Me Aperte!
         </button>
       </div>
-      <div class="container-contador">
-        <p id="btn-counter">0</p>
-      </div>
     </div>
+
     <script src="index.js"></script>
   </body>
 </html>

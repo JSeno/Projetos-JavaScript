@@ -1,0 +1,48 @@
+body {
+  text-align: center;
+  background-color: cornflowerblue;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* Container principal */
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Container contador */
+.contador {
+  display: flex;
+  background-color: rgb(11, 109, 255);
+  box-shadow: 2px 2px 0 rgb(46, 5, 75);
+  border: 2px solid rgb(8, 57, 131);
+  border-radius: 15px;
+  width: 100%;
+  height: 50px;
+  max-width: 300px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  margin: 3px;
+  font-size: 40px;
+}
+
+/* Botão */
+.btn-click {
+  padding: 15px;
+  margin: 5px;
+  width: 150px;
+  height: 100px;
+  background-color: rgb(131, 15, 214);
+  box-shadow: 2px 2px 0 rgb(46, 5, 75);
+  color: blanchedalmond;
+  font-size: 28px;
+  border-radius: 15px;
+}
