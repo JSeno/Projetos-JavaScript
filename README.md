@@ -1,8 +1,8 @@
-# Pequenos projetos de JavaScript
+# Projetos: JavaScript
 
-Aqui estarei postando pequenos projetos que fiz com javascript durante meu aprendizado.
+Repositório para aplicação do meu aprendizado de **javascript** em projetos de pequeno escopo.
 
-Para rodar os projetos só precisa fazer o download abrir o arquivo index.html e utilizar conforme instruções que estão na tela do projeto.
+Para rodar os projetos só precisa clonar o respositório e abrir o arquivo `index.html`.
 
 - **Contador de cliques**: Projeto simples de contar quantos cliques você faz no botão.&nbsp;  
   ![Contador de Cliques](image-1.png)
