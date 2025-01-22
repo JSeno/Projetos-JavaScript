@@ -1,0 +1,17 @@
+.calculator {
+  display: block;
+  background-color: #000000;
+  width: 250px;
+  height: 400px;
+}
+
+.calculator__display {
+  display: block;
+  background-color: #faebfa;
+  justify-content: end;
+  align-items: center;
+  width: 240px;
+  height: 50px;
+  padding: 5px;
+  margin: 0;
+}
