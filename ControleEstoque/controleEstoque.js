@@ -52,9 +52,4 @@ itemForm.addEventListener("submit", (event) => {
   renderProdutos();
 });
 
-// Um laço para mostrar os produtos do array só para ver o que está acontecendo.
-for (let i of produtos) {
-  console.log("Mostrando Produto: ", i);
-}
-
 renderProdutos();
