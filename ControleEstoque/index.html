@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle Estoque</title>
+  </head>
+  <body>
+    <h1>Controle Estoque</h1>
+    <form id="itemForm">
+      <input type="text" id="itemName" placeholder="Nome do item" required />
+      <input
+        type="number"
+        id="itemQuantity"
+        placeholder="Quantidade de Produtos"
+        required
+      />
+      <input
+        type="number"
+        id="itemValue"
+        placeholder="Valor do item"
+        required
+      />
+      <button type="submit">Adicionar Item</button>
+    </form>
+    <ul id="itemList"></ul>
+
+    <!-- Certifique-se de que o script está sendo carregado corretamente -->
+    <script src="controleEstoque.js"></script>
+  </body>
+</html>
