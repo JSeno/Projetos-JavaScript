@@ -52,31 +52,61 @@ function deletarProduto(index) {
 
 // Função para renderizar os produtos na tela
 function renderProdutos() {
-  produtosList.innerHTML = "";
+  // Limpa o conteúdo da tabela (exceto o cabeçalho)
+  const tbody = produtosList.querySelector("tbody");
+  if (tbody) {
+    tbody.remove(); // Remove o tbody existente
+  }
+
+  // Cria um novo tbody
+  const newTbody = document.createElement("tbody");
+
+  // Adiciona cada produto ao tbody
   produtos.forEach((produto, index) => {
-    const li = document.createElement("li");
+    const tr = document.createElement("tr");
 
-    // Adiciona o conteúdo do produto
-    li.textContent = `ID:${produto.id} - ${produto.nome} - ${produto.quantidade} - ${produto.preco}`;
+    // Cria e adiciona as células (td) para cada campo do produto
+    const tdId = document.createElement("td");
+    tdId.textContent = produto.id;
+    tr.appendChild(tdId);
 
-    // Adiciona um botão para editar o produto
+    const tdNome = document.createElement("td");
+    tdNome.textContent = produto.nome;
+    tr.appendChild(tdNome);
+
+    const tdQuantidade = document.createElement("td");
+    tdQuantidade.textContent = produto.quantidade;
+    tr.appendChild(tdQuantidade);
+
+    const tdPreco = document.createElement("td");
+    tdPreco.textContent = produto.preco.toFixed(2);
+    tr.appendChild(tdPreco);
+
+    // Cria e adiciona os botões de editar e excluir
+    const tdAcoes = document.createElement("td");
+
     const btnEditar = document.createElement("button");
     btnEditar.textContent = "Editar";
     btnEditar.addEventListener("click", () => {
       editarProduto(index);
     });
 
-    // Adiciona um botão para deletar o produto
     const btnDeletar = document.createElement("button");
     btnDeletar.textContent = "Excluir";
     btnDeletar.addEventListener("click", () => {
       deletarProduto(index);
     });
 
-    li.appendChild(btnEditar);
-    li.appendChild(btnDeletar);
-    produtosList.appendChild(li);
+    tdAcoes.appendChild(btnEditar);
+    tdAcoes.appendChild(btnDeletar);
+    tr.appendChild(tdAcoes);
+
+    // Adiciona a linha ao tbody
+    newTbody.appendChild(tr);
   });
+
+  // Adiciona o tbody à tabela
+  produtosList.appendChild(newTbody);
   console.log("Produtos renderizados!");
 }
 
@@ -104,4 +134,5 @@ itemForm.addEventListener("submit", (event) => {
   itemForm.reset();
 });
 
+// Renderiza os produtos ao carregar a página
 renderProdutos();
