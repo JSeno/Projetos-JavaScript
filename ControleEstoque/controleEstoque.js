@@ -9,9 +9,11 @@ const btnSubmit = document.querySelector("#itemForm button[type='submit']");
 // Array para salvar os produtos.
 let produtos = [];
 let edicaoProduto = null;
+let produtoId = 1;
 
 // Função para criar um produto (Create)
 function adicionarProduto(produto) {
+  produto.id = produtoId++;
   produtos.push(produto);
   console.log("Produto Adicionado: ", produto);
 }
@@ -55,7 +57,7 @@ function renderProdutos() {
     const li = document.createElement("li");
 
     // Adiciona o conteúdo do produto
-    li.textContent = `${produto.nome} - ${produto.quantidade} - ${produto.preco}`;
+    li.textContent = `ID:${produto.id} - ${produto.nome} - ${produto.quantidade} - ${produto.preco}`;
 
     // Adiciona um botão para editar o produto
     const btnEditar = document.createElement("button");
