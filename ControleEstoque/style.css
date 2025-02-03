@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c9fff3;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topo {
+  background-color: #0dca16;
+  color: #ffffff;
+  width: 100%;
+  height: 100px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #0dca16;
+}
+
+button {
+  background-color: #0dca16;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0aa312;
+}
+
+/* Tabela */
+.tabela {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tabela th,
+.tabela td {
+  padding: 12px;
+  border: 1px solid #0dca16;
+}
+
+.tabela th {
+  background-color: #0dca16;
+  color: white;
+}
+
+.tabela tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tabela button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.tabela button:first-child {
+  background-color: #fbc02d;
+  color: white;
+}
+
+.tabela button:first-child:hover {
+  background-color: #e6a500;
+}
+
+.tabela button:last-child {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.tabela button:last-child:hover {
+  background-color: #b71c1c;
+}
