@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO List em JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="topo">
+      <h1>Todo List</h1>
+    </div>
+    <div>
+      <input
+        type="text"
+        id="nomeTodo"
+        placeholder="Digite o nome da Tarefa"
+        required
+      />
+      <input
+        type="text"
+        id="descricaoTodo"
+        placeholder="Descrição da tarefa"
+        required
+      />
+      <select name="statusTodo" id="statusTodo">
+        <option value=" ">------------</option>
+        <option value="not started">Não Iniciado</option>
+        <option value="in progress">Em Andamento</option>
+        <option value="done">Finalizada</option>
+      </select>
+      <button type="submit" id="btn-submit">Adicionar</button>
+    </div>
+    <div class="main">
+      <div class="card-todo" id="card-todo"></div>
+    </div>
+    <script src="todolist.js"></script>
+  </body>
+</html>
