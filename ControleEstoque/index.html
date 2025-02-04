@@ -3,28 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Controle Estoque</title>
   </head>
   <body>
-    <h1>Controle Estoque</h1>
-    <form id="itemForm">
-      <input type="text" id="itemName" placeholder="Nome do item" required />
-      <input
-        type="number"
-        id="itemQuantity"
-        placeholder="Quantidade de Produtos"
-        required
-      />
-      <input
-        type="number"
-        id="itemPrice"
-        placeholder="Valor do item"
-        step="0.01"
-        required
-      />
-      <button type="submit">Adicionar Produto</button>
-    </form>
-    <ul id="produtosList"></ul>
+    <div class="topo">
+      <h1>Controle Estoque</h1>
+    </div>
+    <div class="formulario">
+      <form id="itemForm">
+        <input type="text" id="itemName" placeholder="Nome do item" required />
+        <input
+          type="number"
+          id="itemQuantity"
+          placeholder="Quantidade de Produtos"
+          required
+        />
+        <input
+          type="number"
+          id="itemPrice"
+          placeholder="Valor do item"
+          step="0.01"
+          required
+        />
+        <button type="submit">Adicionar Produto</button>
+      </form>
+      <table id="produtosList" class="tabela">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome do Produto</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
 
     <script src="controleEstoque.js"></script>
   </body>
