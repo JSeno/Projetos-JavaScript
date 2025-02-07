@@ -24,3 +24,14 @@ function adicionarTarefa(tarefa) {
 // Mostrar no html as tarefas
 
 // Eventos com uso de submit e click
+formTodo.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const novaTarefa = {
+    nome: nomeTodo.value,
+    descricao: descricaoTodo.value,
+    status: statusTodo.value,
+  };
+
+  adicionarTarefa(novaTarefa);
+});
