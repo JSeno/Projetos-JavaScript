@@ -16,11 +16,49 @@ function adicionarTarefa(tarefa) {
 }
 
 // Read - Fazer a Leitura das tarefas
+function mostrarTarefas() {
+  console.log("Listando tarefas: ", listTodo);
+  return listTodo;
+}
 
 // Update - Editar uma tarefa
 
 // Delete - Deletar uma tarefa
 
 // Redenrizar no html as tarefas
+function renderizarTarefas() {
+  main.innerHTML = ""; // Limpa as tarefas antes de renderizar
+
+  listTodo.forEach((tarefa) => {
+    const div = document.createElement("div");
+    div.classList.add("card-tarefa");
+
+    div.innerHTML = `
+      <p>Tarefa: ${tarefa.nome}</p>
+      <p>Descrição: ${tarefa.descricao}</p>
+      <p>Status: ${tarefa.status}</p>
+    `;
+
+    main.appendChild(div);
+  });
+}
 
 // Adicionar eventos de submit e click
+formTodo.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const novaTarefa = {
+    nome: nomeTodo.value,
+    descricao: descricaoTodo.value,
+    status: statusTodo.value,
+  };
+
+  adicionarTarefa(novaTarefa);
+  mostrarTarefas();
+  renderizarTarefas();
+
+  nomeTodo.value = "";
+  descricaoTodo.value = "";
+  statusTodo.value = "";
+});
+
+renderizarTarefas();
